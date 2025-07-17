@@ -11,7 +11,32 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Amit Dutta | MLOps Engineer & PhD Researcher",
-  description: "Amit Dutta is an MLOps engineer and PhD researcher with 4 years of experience in full-stack development, machine learning, and intelligent systems.",
+  description:
+      "Amit Dutta is an MLOps engineer and PhD researcher with 4 years of experience in full-stack development, machine learning, and intelligent systems.",
+  openGraph: {
+    title: "Amit Dutta | MLOps Engineer & PhD Researcher",
+    description:
+        "Explore the portfolio of Amit Dutta, showcasing work in machine learning, MLOps, and adaptive learning systems.",
+    url: "https://www.amitdutta.info",
+    siteName: "Amit Dutta Portfolio",
+    images: [
+      {
+        url: "https://www.amitdutta.info/preview.png", // Replace with your actual image path
+        width: 1200,
+        height: 630,
+        alt: "Amit Dutta Portfolio Preview",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Amit Dutta | MLOps Engineer & PhD Researcher",
+    description:
+        "Explore the portfolio of Amit Dutta, showcasing ML pipelines, research, and full-stack engineering.",
+    images: ["https://www.amitdutta.info/preview.png"], // Replace with your image
+  },
 };
 
 export default function RootLayout({
