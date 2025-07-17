@@ -30,13 +30,13 @@ export default function Intro() {
             }}
           >
             <Image
-              src="/profile_picture.jpg"
-              alt="Ricardo portrait"
-              width="192"
-              height="192"
-              quality="95"
-              priority={true}
-              className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+                src="/profile_picture.jpg"
+                alt="Amit Dutta portrait"
+                width={192}
+                height={192}
+                quality={95}
+                priority={true}
+                className="h-48 w-48 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
             />
           </motion.div>
 
@@ -67,7 +67,10 @@ export default function Intro() {
         scalable ML pipelines and full-stack applications using{" "}
         <span className="font-bold">React</span>,{" "}
         <span className="font-bold">React Native</span>, and{" "}
-        <span className="font-bold">Java Spring Boot</span>.
+        <span className="font-bold">Java Spring Boot</span>. I'm currently{" "}
+        pursuing a <span className="font-bold">Ph.D. in Computer Science</span> at{" "}
+        the <span className="font-bold">University of Nevada, Reno</span>, focusing
+        on adaptive learning systems.
       </motion.h1>
 
 
