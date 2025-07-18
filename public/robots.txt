@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.amitdutta.info
+
+# Sitemaps
+Sitemap: https://www.amitdutta.info/sitemap.xml

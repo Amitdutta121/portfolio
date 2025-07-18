@@ -12,30 +12,71 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Amit Dutta | MLOps Engineer & PhD Researcher",
   description:
-      "Amit Dutta is an MLOps engineer and PhD researcher with 4 years of experience in full-stack development, machine learning, and intelligent systems.",
+      "Portfolio of Amit Dutta — MLOps engineer and PhD researcher at the University of Nevada, Reno. Specialized in ML pipelines, full-stack development, and adaptive learning systems.",
+  keywords: [
+    "Amit Dutta",
+    "MLOps",
+    "PhD Researcher",
+    "University of Nevada Reno",
+    "Machine Learning",
+    "Deep Learning",
+    "Adaptive Systems",
+    "React",
+    "Next.js",
+    "Spring Boot",
+    "React Native",
+    "Portfolio",
+    "Software Engineer",
+    "Intelligent Tutoring Systems"
+  ],
+  metadataBase: new URL("https://www.amitdutta.info"),
+  authors: [
+    {
+      name: "Amit Dutta",
+      url: "https://www.amitdutta.info",
+    },
+  ],
+  creator: "Amit Dutta",
   openGraph: {
-    title: "Amit Dutta | MLOps Engineer & PhD Researcher",
-    description:
-        "Explore the portfolio of Amit Dutta, showcasing work in machine learning, MLOps, and adaptive learning systems.",
+    type: "website",
+    locale: "en_US",
     url: "https://www.amitdutta.info",
     siteName: "Amit Dutta Portfolio",
+    title: "Amit Dutta | MLOps Engineer & PhD Researcher",
+    description:
+        "Explore the portfolio of Amit Dutta — experienced MLOps engineer and PhD student at UNR building scalable ML systems, adaptive simulations, and full-stack applications.",
     images: [
       {
-        url: "https://www.amitdutta.info/preview.png", // Replace with your actual image path
+        url: "/og-image.png", // must exist in /public
         width: 1200,
         height: 630,
         alt: "Amit Dutta Portfolio Preview",
       },
     ],
-    locale: "en_US",
-    type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Amit Dutta | MLOps Engineer & PhD Researcher",
     description:
-        "Explore the portfolio of Amit Dutta, showcasing ML pipelines, research, and full-stack engineering.",
-    images: ["https://www.amitdutta.info/preview.png"], // Replace with your image
+        "Scalable ML pipelines. Adaptive learning systems. Full-stack apps with React, Spring Boot, and Python.",
+    creator: "@yourhandle", // update with your real Twitter handle
+    images: ["/og-image.png"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-32x32.png",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/site.webmanifest",
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+    },
   },
 };
 
