@@ -9,27 +9,26 @@ export default function About() {
   const { ref } = useSectionInView("About");
 
   return (
-      <motion.section
-          ref={ref}
-          className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.175 }}
-          id="about"
-      >
-        <SectionHeading>About me</SectionHeading>
-        <p className="mb-3">
-          I'm currently pursuing a{" "}
-          <span className="font-medium">PhD in Computer Science</span> at the
-          University of Nevada, Reno, where my research focuses on{" "}
-          <span className="font-medium">adaptive learning systems</span> combining{" "}
-          <span className="font-medium">machine learning and evolutionary computing</span>.
-          With over <span className="font-medium">4 years of experience</span> in
-          software development, I specialize in building scalable{" "}
-          <span className="font-medium">MLOps pipelines</span>, modern user interfaces
-          with <span className="font-medium">React and React Native</span>, and
-          robust backend systems using{" "}
-          <span className="font-medium">Java Spring Boot</span>.
+    <motion.section
+      ref={ref}
+      className="mb-24 max-w-[48rem] scroll-mt-28 rounded-3xl border border-black/5 bg-white/75 px-6 py-8 text-center leading-8 shadow-sm backdrop-blur sm:mb-32 sm:px-10 dark:border-white/10 dark:bg-white/10"
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.175 }}
+      id="about"
+    >
+      <SectionHeading>About Me</SectionHeading>
+      <div className="mx-auto max-w-[42rem] text-gray-700 dark:text-white/75">
+        <p className="mb-4">
+          Hello, I&apos;m Amit Dutta, a Ph.D. candidate in Computer Science at
+          the University of Nevada, Reno, focusing on adaptive learning
+          systems. I have 6+ years of combined software engineering and applied
+          AI research experience, building scalable ML pipelines, adaptive
+          training systems, and full-stack applications using Python, PyTorch,
+          LangChain, LangGraph, Spring Boot, React, and React Native. My work
+          includes peer-reviewed research on statistically effective adaptive
+          training algorithms and production applications used by 10,000+
+          users.
         </p>
 
         <p>
@@ -39,6 +38,7 @@ export default function About() {
           <span className="font-medium">cloud-native MLOps</span> practices,
           real-time data systems, and scaling ML workflows in production.
         </p>
-      </motion.section>
+      </div>
+    </motion.section>
   );
 }

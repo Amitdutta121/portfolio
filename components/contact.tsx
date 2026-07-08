@@ -7,6 +7,7 @@ import { useSectionInView } from "@/lib/hooks";
 import { sendEmail } from "@/actions/sendEmail";
 import SubmitBtn from "./submit-btn";
 import toast from "react-hot-toast";
+import { cardSurface, sectionShell } from "./design-system";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
@@ -15,7 +16,7 @@ export default function Contact() {
     <motion.section
       id="contact"
       ref={ref}
-      className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
+      className={`${sectionShell} max-w-[38rem] text-center`}
       initial={{
         opacity: 0,
       }}
@@ -31,7 +32,7 @@ export default function Contact() {
     >
       <SectionHeading>Contact me</SectionHeading>
 
-      <p className="text-gray-700 -mt-6 dark:text-white/80">
+      <p className="-mt-4 text-sm leading-7 text-gray-600 dark:text-white/65 sm:text-base">
         Please contact me directly at{" "}
         <a className="underline" href="mailto:example@gmail.com">
           amitdutta121@gmail.com
@@ -40,7 +41,7 @@ export default function Contact() {
       </p>
 
       <form
-        className="mt-10 flex flex-col dark:text-black"
+        className={`${cardSurface} mt-8 flex flex-col p-5 dark:text-black sm:p-6`}
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
 
@@ -53,7 +54,7 @@ export default function Contact() {
         }}
       >
         <input
-          className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="h-14 rounded-xl border border-black/10 bg-white px-4 transition-all outline-none focus:border-black/20 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100"
           name="senderEmail"
           type="email"
           required
@@ -61,7 +62,7 @@ export default function Contact() {
           placeholder="Your email"
         />
         <textarea
-          className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="my-3 h-44 rounded-xl border border-black/10 bg-white p-4 transition-all outline-none focus:border-black/20 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100"
           name="message"
           placeholder="Your message"
           required

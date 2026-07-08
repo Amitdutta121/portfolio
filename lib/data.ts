@@ -102,6 +102,7 @@ export const projectsData = [
     imageUrl: raftImg,
     links: {
       github: "https://github.com/Amitdutta121/RAFT-Adaptive-Trainer",
+      paper: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=V9jpKdUAAAAJ&citation_for_view=V9jpKdUAAAAJ:d1gkVwhDpl0C",
     },
     category: "Research",
   },
