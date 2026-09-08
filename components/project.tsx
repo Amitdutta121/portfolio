@@ -3,15 +3,16 @@
 import { useRef } from "react";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
+import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { FiExternalLink } from "react-icons/fi";
-import { cardSurface, chipClassName, primaryPillLink } from "./design-system";
+import { FiArrowRight, FiExternalLink } from "react-icons/fi";
+import { cardSurface, chipClassName, primaryPillLink, secondaryPillLink } from "./design-system";
 
 type ProjectProps = (typeof projectsData)[number];
 
 const linkLabelMap: Record<string, string> = {
   github: "GitHub",
-  paper: "HCII 2025",
+  paper: "Paper",
   web: "Live Site",
   android: "Android",
   ios: "iOS",
@@ -24,6 +25,7 @@ export default function Project({
   imageUrl,
   links,
   category,
+  slug,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -45,21 +47,36 @@ export default function Project({
       <section
         className={`${cardSurface} flex h-full max-w-[42rem] flex-col overflow-hidden dark:text-white`}
       >
-        <div className="relative h-52 overflow-hidden bg-gray-100 dark:bg-white/5">
-          <Image
-            src={imageUrl}
-            alt={`${title} project preview`}
-            quality={95}
-            className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/5 to-transparent" />
-          <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-gray-800 shadow-sm backdrop-blur dark:bg-black/50 dark:text-white">
-            {category}
-          </span>
-        </div>
+        {imageUrl ? (
+          <Link
+            href={`/projects/${slug}`}
+            className="relative block h-52 overflow-hidden bg-gray-100 dark:bg-white/5"
+          >
+            <Image
+              src={imageUrl}
+              alt={`${title} project preview`}
+              quality={95}
+              className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/5 to-transparent" />
+            <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-gray-800 shadow-sm backdrop-blur dark:bg-black/50 dark:text-white">
+              {category}
+            </span>
+          </Link>
+        ) : (
+          <div className="px-6 pt-6">
+            <span className="rounded-full bg-gray-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-gray-700 dark:bg-white/10 dark:text-white/70">
+              {category}
+            </span>
+          </div>
+        )}
 
         <div className="flex flex-1 flex-col p-6">
-          <h3 className="text-2xl font-semibold leading-snug">{title}</h3>
+          <h3 className="text-2xl font-semibold leading-snug">
+            <Link href={`/projects/${slug}`} className="hover:underline">
+              {title}
+            </Link>
+          </h3>
           <p className="mt-3 leading-relaxed text-gray-700 dark:text-white/70">
             {description}
           </p>
@@ -75,9 +92,13 @@ export default function Project({
             ))}
           </ul>
 
-          {links && (
-            <div className="mt-6 flex flex-wrap gap-2 pt-2 sm:mt-auto">
-              {Object.entries(links).map(([label, href]) => (
+          <div className="mt-6 flex flex-wrap gap-2 pt-2 sm:mt-auto">
+            <Link href={`/projects/${slug}`} className={secondaryPillLink}>
+              View details
+              <FiArrowRight className="ml-1.5 text-[0.8rem]" />
+            </Link>
+            {links &&
+              Object.entries(links).map(([label, href]) => (
                 <a
                   key={label}
                   href={href}
@@ -89,8 +110,7 @@ export default function Project({
                   <FiExternalLink className="text-[0.8rem] opacity-70" />
                 </a>
               ))}
-            </div>
-          )}
+          </div>
         </div>
       </section>
     </motion.div>

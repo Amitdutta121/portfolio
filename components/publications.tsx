@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import SectionHeading from "./section-heading";
+import { useSectionInView } from "@/lib/hooks";
 import {
   cardSurface,
   primaryPillLink,
@@ -20,6 +21,8 @@ const publications = [
     details:
       "Held as part of HCII 2026, Montreal, QC, Canada, July 26-31, 2026. Springer Nature, p. 301.",
     year: "2026",
+    // TODO(real): not yet indexed on Springer Link / assigned a DOI as of Sept 2026 —
+    // replace with the chapter's own link once it's live. Falls back to the Scholar profile.
     link: "https://scholar.google.com/citations?user=V9jpKdUAAAAJ&hl=en",
   },
   {
@@ -39,7 +42,7 @@ const publications = [
     venue: "IEEE Access",
     details: "Vol. 12, pp. 31287-31311. IEEE.",
     year: "2024",
-    link: "https://scholar.google.com/citations?user=V9jpKdUAAAAJ&hl=en",
+    link: "https://ieeexplore.ieee.org/document/10445192/",
   },
   {
     title:
@@ -48,13 +51,15 @@ const publications = [
     venue: "Journal of Materials Research",
     details: "Vol. 29, no. 21, pp. 2485-2490. Springer.",
     year: "2014",
-    link: "https://scholar.google.com/citations?user=V9jpKdUAAAAJ&hl=en",
+    link: "https://www.cambridge.org/core/journals/journal-of-materials-research/article/abs/electromagnetic-dispersion-of-surface-plasmon-polariton-at-the-egsic-interface/61700BEADE736328E847E6619D036ECA",
   },
 ] as const;
 
 export default function Publications() {
+  const { ref } = useSectionInView("Research");
+
   return (
-    <section id="research" className={sectionShell}>
+    <section id="research" ref={ref} className={sectionShell}>
       <SectionHeading>Research & Publications</SectionHeading>
       <p className={sectionSubtitle}>
         Peer-reviewed work connecting adaptive training, reinforcement learning,
