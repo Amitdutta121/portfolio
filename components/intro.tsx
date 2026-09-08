@@ -18,12 +18,11 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="mb-24 w-full max-w-[64rem] scroll-mt-[100rem] rounded-3xl border border-black/5 bg-white/70 px-6 py-8 shadow-sm backdrop-blur sm:mb-32 sm:px-10 sm:py-12 dark:border-white/10 dark:bg-white/10"
+      className="mb-24 w-full max-w-[64rem] scroll-mt-28 rounded-3xl border border-black/5 bg-white/70 px-6 py-8 shadow-sm backdrop-blur sm:mb-32 sm:px-10 sm:py-12 dark:border-white/10 dark:bg-white/10"
     >
       <div className="grid items-center gap-10 lg:grid-cols-[1.35fr_0.9fr]">
         <motion.div
-          id="about"
-          className="scroll-mt-28 text-center lg:text-left"
+          className="text-center lg:text-left"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
         >

@@ -2,23 +2,17 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
 import sharebikeImg from "@/public/sharebike.png";
 import upayImg from "@/public/upay.png";
 import erpImg from "@/public/erp.png";
 import natPortfolioImg from "@/public/NAT_portfolio.png";
 import raftImg from "@/public/raft_radar_portfolio.png";
+import uatDashboardImg from "@/public/uat_dashboard.png";
 
 export const links = [
   {
     name: "Home",
     hash: "#home",
-  },
-  {
-    name: "About",
-    hash: "#about",
   },
   {
     name: "Projects",
@@ -31,6 +25,10 @@ export const links = [
   {
     name: "Experience",
     hash: "#experience",
+  },
+  {
+    name: "Research",
+    hash: "#research",
   },
   {
     name: "Contact",
@@ -84,18 +82,32 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "NAT: Neural Adaptive Trainer",
+    title: "Universal Adaptive Trainer",
+    slug: "universal-adaptive-trainer",
     description:
-        "An adaptive system that uses a neural network to personalize training by predicting performance and targeting learner weaknesses.",
-    tags: ["Unity", "Neural Network", "ML", "C#"],
+        "PhD research platform that turns a textbook into an adaptive Python course: RAG question generation against a topic taxonomy, deterministic sandboxed evaluation plus an LLM-as-judge layer aligned to professor feedback with GEPA, and Bayesian Knowledge Tracing that picks each student's next question from their weak topics.",
+    tags: ["FastAPI", "Next.js", "RAG", "LLM-as-Judge", "BKT", "Python"],
+    imageUrl: uatDashboardImg,
+    links: {
+      github: "https://github.com/Amitdutta121/Universal_adaptive_trainer",
+    },
+    category: "Research",
+  },
+  {
+    title: "NAT & NAT-LLM: Adaptive Training + AI Feedback",
+    slug: "nat-nat-llm",
+    description:
+        "NAT is a domain-agnostic, multi-parameter adaptive training algorithm that selects each learner's next activity from performance, weaknesses, and cognitive load; NAT-LLM generates after-action feedback from expert-written examples. Applied in a Unity-based naval simulator: NAT statistically outperformed non-adaptive training, and NAT-LLM reached 98% agreement with expert evaluations.",
+    tags: ["Unity", "Adaptive Learning", "LLM Feedback", "C#", "Python"],
     imageUrl: natPortfolioImg,
     links: {
-      github: "http://164.90.151.175:8080/NAT/",
+      github: "https://github.com/Amitdutta121/Neuro-Adaptive-Trainer",
     },
     category: "Research",
   },
   {
     title: "RAFT: Rule-Adaptive Feedback Trainer",
+    slug: "raft",
     description:
         "Implemented a rule-based system that adjusts scenario difficulty based on student performance in maritime navigation training.",
     tags: ["Unity", "Rule-Based System", "Python"],
@@ -107,10 +119,35 @@ export const projectsData = [
     category: "Research",
   },
   {
-    title: "Sharebike",
+    title: "MyThinker",
+    slug: "mythinker",
     description:
-        "A white-label bike-sharing app developed using React Native, Firebase, Stripe, and CodePush. Integrated CI/CD with Fastlane and CircleCI.",
-    tags: ["React Native", "Firebase", "Stripe", "CI/CD"],
+        "A stateful AI thinking-partner agent that refines a plan as you chat: one conversational agent with narrowly scoped tools where tool selection is the router, and deterministic precondition gates (proposal → authorization → commitment) instead of a graph of agents. Persistent memory in SQLite, streaming API, Next.js workspace.",
+    tags: ["LangGraph", "FastAPI", "Next.js", "Agents", "SQLite"],
+    imageUrl: undefined,
+    links: {
+      github: "https://github.com/Amitdutta121/MyThinker",
+    },
+    category: "AI Systems",
+  },
+  {
+    title: "Flowr",
+    slug: "flowr",
+    description:
+        "A local, on-device AI dictation app for Windows: hold a hotkey, speak, release, and the transcription is inserted into the focused app. Local Whisper / Parakeet / Moonshine speech recognition with Silero VAD endpointing, local-LLM cleanup via Ollama with per-app style context, custom vocabulary and voice snippets, and a fine-tuned speech-correction model — no account, cloud, or telemetry.",
+    tags: ["Rust", "Tauri 2", "React", "ONNX", "Whisper", "Ollama"],
+    imageUrl: undefined,
+    links: {
+      github: "https://github.com/Amitdutta121/Flowr",
+    },
+    category: "AI Systems",
+  },
+  {
+    title: "Sharebike",
+    slug: "sharebike",
+    description:
+        "End-to-end white-label bike-sharing platform serving 10,000+ users. Mobile app in React Native with Firebase Authentication, Stripe payments, and CircleCI/CodePush deployment pipelines; backend fleet-management services in Spring Boot microservices with Google Cloud Pub/Sub event-driven ingestion for real-time device data across regions.",
+    tags: ["React Native", "Spring Boot", "Firebase", "Stripe", "Google Cloud Pub/Sub", "CI/CD"],
     imageUrl: sharebikeImg,
     links: {
       android: "https://play.google.com/store/apps/details?id=com.sweetitech.tradesworth",
@@ -121,6 +158,7 @@ export const projectsData = [
   },
   {
     title: "ERP Management App",
+    slug: "erp-management-app",
     description:
         "A full-featured ERP system for managing HR, inventory, and sales. Built with React Native and Redux, available on Android and iOS.",
     tags: ["React Native", "Redux", "ERP", "Mobile"],
@@ -133,6 +171,7 @@ export const projectsData = [
   },
   {
     title: "Upay Website",
+    slug: "upay-website",
     description:
         "Responsive website for Upay built using Next.js and Tailwind. Showcases services, charges, and features based on Figma designs.",
     tags: ["Next.js", "Tailwind", "React", "Web"],
@@ -143,22 +182,57 @@ export const projectsData = [
     category: "Web",
   },
   {
-    title: "Reinforcement Learning for Trading",
+    title: "Multimodal Knowledge Distillation for VQA",
+    slug: "multimodal-kd-vqa",
     description:
-        "Developed a PPO-based reinforcement learning agent in a custom OpenAI Gym environment to simulate stock trading decisions.",
-    tags: ["Python", "PPO", "Reinforcement Learning", "Gym"],
-    imageUrl: sharebikeImg,
+        "Distilled a ViLT VQA model into a ~half-size student (6 layers, hidden size 384) under four losses — logit, hidden-state, attention, and hybrid — trained and evaluated through one shared harness on VQA v1.",
+    tags: ["PyTorch", "ViLT", "Knowledge Distillation", "VQA", "Hugging Face"],
+    imageUrl: undefined,
+    links: {},
+    category: "Machine Learning",
+  },
+  {
+    title: "Traffic Anomaly Detection System",
+    slug: "traffic-anomaly-detection",
+    description:
+        "End-to-end MLOps pipeline for anomaly detection on traffic sensor data, using MLflow and DVC for experiment tracking and reproducibility, model serving containerized with FastAPI and Docker, and Prometheus/Grafana monitoring for real-time metrics and observability.",
+    tags: ["MLOps", "MLflow", "DVC", "FastAPI", "Docker", "Prometheus", "Grafana"],
+    imageUrl: undefined,
+    links: {},
+    category: "Machine Learning",
+  },
+  {
+    title: "ROBB: Recurrent PPO for Blockchain Block Formation",
+    slug: "robb",
+    description:
+        "Designed and evaluated a recurrent reinforcement learning approach that dynamically forms blocks in a Bitcoin blockchain network, balancing waiting time against block utilization. Published in IEEE Access.",
+    tags: ["Reinforcement Learning", "Recurrent PPO", "Blockchain", "Python"],
+    imageUrl: undefined,
     links: {
-      github: "https://github.com/Amitdutta121/Reinforce_learing_trading",
+      github: "https://github.com/Amitdutta121/blockchain-reinforcement-learning",
+      paper: "/robb-recurrent-ppo-blockchain.pdf",
+    },
+    category: "Machine Learning",
+  },
+  {
+    title: "Reinforcement Learning for Trading",
+    slug: "rl-trading",
+    description:
+        "BSc thesis: a PPO + RNN-LSTM trading agent in a custom OpenAI Gym environment, tuned via a 50-set technical-indicator search, that outperformed manual trading on the same indicators.",
+    tags: ["Python", "PPO", "RNN-LSTM", "Reinforcement Learning", "Gym", "Optuna"],
+    imageUrl: undefined,
+    links: {
+      paper: "/rl-trading-thesis.pdf",
     },
     category: "Machine Learning",
   },
   {
     title: "Bangla Grapheme Prediction",
+    slug: "bangla-grapheme-prediction",
     description:
-        "Built a handwriting recognition model using ResNet-50 and PyTorch for Bengali graphemes. Submitted to a Kaggle competition.",
-    tags: ["PyTorch", "ResNet", "Computer Vision", "Kaggle"],
-    imageUrl: sharebikeImg,
+        "Trained a multi-head SEResNeXt50 classifier in PyTorch to jointly predict grapheme root, vowel, and consonant diacritics for Bengali handwriting. Submitted to a Kaggle competition.",
+    tags: ["PyTorch", "SEResNeXt", "Computer Vision", "Kaggle"],
+    imageUrl: undefined,
     links: {
       github: "https://www.kaggle.com/code/amitdutta121/bengali-seresnext-training-with-pytorch",
     },
@@ -166,10 +240,11 @@ export const projectsData = [
   },
   {
     title: "Food Recommendation System",
+    slug: "food-recommendation-system",
     description:
         "Used KNN to build a simple food recommendation engine based on user preferences.",
     tags: ["Python", "KNN", "Machine Learning"],
-    imageUrl: sharebikeImg,
+    imageUrl: undefined,
     links: {
       github: "https://github.com/Amitdutta121/Food-recommender-system-ML",
     },
@@ -177,40 +252,4 @@ export const projectsData = [
   },
 ] as const;
 
-export const skillsData = [
-  // MLOps & DevOps
-  "MLflow",
-  "DVC",
-  "Docker",
-  "Kubernetes",
-  "Git",
-  "FastAPI",
-  "AWS",
-
-  // Programming Languages
-  "Python",
-  "Java",
-  "TypeScript",
-  "JavaScript",
-
-  // Backend
-  "Spring Boot",
-  "Node.js",
-  "Express",
-
-  // Frontend
-  "React",
-  "React Native",
-  "Next.js",
-  "Redux",
-  "Tailwind CSS",
-  "HTML",
-  "CSS",
-
-  // Databases & Cloud
-  "PostgreSQL",
-  "MySQL",
-  "MongoDB",
-  "Firebase"
-] as const;
 
