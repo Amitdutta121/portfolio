@@ -106,19 +106,6 @@ export const projectsData = [
     category: "Research",
   },
   {
-    title: "RAFT: Rule-Adaptive Feedback Trainer",
-    slug: "raft",
-    description:
-        "Implemented a rule-based system that adjusts scenario difficulty based on student performance in maritime navigation training.",
-    tags: ["Unity", "Rule-Based System", "Python"],
-    imageUrl: raftImg,
-    links: {
-      github: "https://github.com/Amitdutta121/RAFT-Adaptive-Trainer",
-      paper: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=V9jpKdUAAAAJ&citation_for_view=V9jpKdUAAAAJ:d1gkVwhDpl0C",
-    },
-    category: "Research",
-  },
-  {
     title: "MyThinker",
     slug: "mythinker",
     description:
@@ -141,45 +128,6 @@ export const projectsData = [
       github: "https://github.com/Amitdutta121/Flowr",
     },
     category: "AI Systems",
-  },
-  {
-    title: "Sharebike",
-    slug: "sharebike",
-    description:
-        "End-to-end white-label bike-sharing platform serving 10,000+ users. Mobile app in React Native with Firebase Authentication, Stripe payments, and CircleCI/CodePush deployment pipelines; backend fleet-management services in Spring Boot microservices with Google Cloud Pub/Sub event-driven ingestion for real-time device data across regions.",
-    tags: ["React Native", "Spring Boot", "Firebase", "Stripe", "Google Cloud Pub/Sub", "CI/CD"],
-    imageUrl: sharebikeImg,
-    links: {
-      android: "https://play.google.com/store/apps/details?id=com.sweetitech.tradesworth",
-      ios: "https://apps.apple.com/sg/app/twg-hr/id1443884835",
-      github: "https://github.com/Amitdutta121/sharebike-app",
-    },
-    category: "Mobile",
-  },
-  {
-    title: "ERP Management App",
-    slug: "erp-management-app",
-    description:
-        "A full-featured ERP system for managing HR, inventory, and sales. Built with React Native and Redux, available on Android and iOS.",
-    tags: ["React Native", "Redux", "ERP", "Mobile"],
-    imageUrl: erpImg,
-    links: {
-      android: "https://play.google.com/store/apps/details?id=com.sweetitech.sweetagroL",
-      ios: "https://apps.apple.com/us/app/sweet-erp/id1494277774",
-    },
-    category: "Mobile",
-  },
-  {
-    title: "Upay Website",
-    slug: "upay-website",
-    description:
-        "Responsive website for Upay built using Next.js and Tailwind. Showcases services, charges, and features based on Figma designs.",
-    tags: ["Next.js", "Tailwind", "React", "Web"],
-    imageUrl: upayImg,
-    links: {
-      web: "https://www.upaybd.com/",
-    },
-    category: "Web",
   },
   {
     title: "Multimodal Knowledge Distillation for VQA",
@@ -249,6 +197,58 @@ export const projectsData = [
       github: "https://github.com/Amitdutta121/Food-recommender-system-ML",
     },
     category: "Machine Learning",
+  },
+  {
+    title: "RAFT: Rule-Adaptive Feedback Trainer",
+    slug: "raft",
+    description:
+        "Implemented a rule-based system that adjusts scenario difficulty based on student performance in maritime navigation training.",
+    tags: ["Unity", "Rule-Based System", "Python"],
+    imageUrl: raftImg,
+    links: {
+      github: "https://github.com/Amitdutta121/RAFT-Adaptive-Trainer",
+      paper: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=V9jpKdUAAAAJ&citation_for_view=V9jpKdUAAAAJ:d1gkVwhDpl0C",
+    },
+    category: "Research",
+  },
+  {
+    title: "Sharebike",
+    slug: "sharebike",
+    description:
+        "End-to-end white-label bike-sharing platform serving 10,000+ users. Mobile app in React Native with Firebase Authentication, Stripe payments, and CircleCI/CodePush deployment pipelines; backend fleet-management services in Spring Boot microservices with Google Cloud Pub/Sub event-driven ingestion for real-time device data across regions.",
+    tags: ["React Native", "Spring Boot", "Firebase", "Stripe", "Google Cloud Pub/Sub", "CI/CD"],
+    imageUrl: sharebikeImg,
+    links: {
+      android: "https://play.google.com/store/apps/details?id=com.sweetitech.tradesworth",
+      ios: "https://apps.apple.com/sg/app/twg-hr/id1443884835",
+      github: "https://github.com/Amitdutta121/sharebike-app",
+    },
+    category: "Mobile",
+  },
+  {
+    title: "ERP Management App",
+    slug: "erp-management-app",
+    description:
+        "A full-featured ERP system for managing HR, inventory, and sales. Built with React Native and Redux, available on Android and iOS.",
+    tags: ["React Native", "Redux", "ERP", "Mobile"],
+    imageUrl: erpImg,
+    links: {
+      android: "https://play.google.com/store/apps/details?id=com.sweetitech.sweetagroL",
+      ios: "https://apps.apple.com/us/app/sweet-erp/id1494277774",
+    },
+    category: "Mobile",
+  },
+  {
+    title: "Upay Website",
+    slug: "upay-website",
+    description:
+        "Responsive website for Upay built using Next.js and Tailwind. Showcases services, charges, and features based on Figma designs.",
+    tags: ["Next.js", "Tailwind", "React", "Web"],
+    imageUrl: upayImg,
+    links: {
+      web: "https://www.upaybd.com/",
+    },
+    category: "Web",
   },
 ] as const;
 

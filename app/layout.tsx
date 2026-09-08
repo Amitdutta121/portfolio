@@ -10,17 +10,18 @@ import { Toaster } from "react-hot-toast";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Amit Dutta | MLOps Engineer & PhD Researcher",
+  title: "Amit Dutta | Machine Learning Engineer & PhD Researcher",
   description:
-      "Portfolio of Amit Dutta — MLOps engineer and PhD researcher at the University of Nevada, Reno. Specialized in ML pipelines, full-stack development, and adaptive learning systems.",
+      "Portfolio of Amit Dutta — Machine Learning engineer and PhD researcher at the University of Nevada, Reno. Specialized in agentic AI, adaptive learning systems, and full-stack development.",
   keywords: [
     "Amit Dutta",
-    "MLOps",
+    "Machine Learning Engineer",
+    "Agentic AI",
     "PhD Researcher",
     "University of Nevada Reno",
     "Machine Learning",
     "Deep Learning",
-    "Adaptive Systems",
+    "Adaptive Learning Systems",
     "React",
     "Next.js",
     "Spring Boot",
@@ -42,9 +43,9 @@ export const metadata = {
     locale: "en_US",
     url: "https://www.amitdutta.info",
     siteName: "Amit Dutta Portfolio",
-    title: "Amit Dutta | MLOps Engineer & PhD Researcher",
+    title: "Amit Dutta | Machine Learning Engineer & PhD Researcher",
     description:
-        "Explore the portfolio of Amit Dutta — experienced MLOps engineer and PhD student at UNR building scalable ML systems, adaptive simulations, and full-stack applications.",
+        "Explore the portfolio of Amit Dutta — Machine Learning engineer and PhD student at UNR building agentic AI, adaptive learning systems, and full-stack applications.",
     images: [
       {
         url: "/og-image.png", // must exist in /public
@@ -56,9 +57,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Amit Dutta | MLOps Engineer & PhD Researcher",
+    title: "Amit Dutta | Machine Learning Engineer & PhD Researcher",
     description:
-        "Scalable ML pipelines. Adaptive learning systems. Full-stack apps with React, Spring Boot, and Python.",
+        "Agentic AI. Adaptive learning systems. Full-stack apps with React, Spring Boot, and Python.",
     creator: "@yourhandle", // update with your real Twitter handle
     images: ["/og-image.png"],
   },
